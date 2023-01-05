@@ -2,6 +2,7 @@ const { application } = require('express');
 const express = require('express');
 
 const app = express();
+app.use(express.static('public'));
 const port = 8000;
 
 const listeningStartedCallback = () => {
@@ -29,7 +30,7 @@ let anyagok = [
         quantity: 100,
         color: 150
     },
-]
+];
 
 app.get('/api/materials', (req,res) => {
     res.send(anyagok);
@@ -42,5 +43,5 @@ app.get('/api/materials/:id', (req,res) => {
         res.send(404);
     } else {
         res.send(filtracio)
-    }
-})
+    };
+});
