@@ -5,11 +5,7 @@ const app = express();
 app.use(express.static('public'));
 const port = 8000;
 
-const listeningStartedCallback = () => {
-    console.log(`A szerver elindult ${port}`);
-};
-
-app.listen(port, listeningStartedCallback);
+app.listen(port);
 
 let anyagok = [
     {
@@ -45,3 +41,5 @@ app.get('/api/materials/:id', (req,res) => {
         res.send(filtracio)
     };
 });
+
+

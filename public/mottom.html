@@ -5,10 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <h1>Játszva tanulni, tanulva játszani</h1>
     <a href="/">Vissza a főoldalra</a>
-    <a href="/api/materials">Nézd meg az anyagokat</a>
+    <a href="/api/anyagok">Nézd meg az anyagokat</a>
+    <div class="form">
+        <form action="/api/anyagok/new" method="post">
+            <input type="text" name="name" placeholder="Anyag neve:">
+            <input type="text" name="quantity" placeholder="Mennyisége">
+            <input type="text" name="colors" placeholder="Színkód">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 </html>
